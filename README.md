@@ -63,6 +63,38 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
+#### 1. Add homepage  
+Open your package.json file present inside your react app and add homepage property.
+```
+"homepage":"https://yourusername.github.io/repository-name/"
+```
+replace the above url with your github username and repository name.
+
+#### 2. Install gh-pages   
+Next, we need to install a package called gh-pages.
+```
+npm install --save gh-pages
+```
+3. Deploy script
+It’s time to add a deploy script commands in our package.json file.
+```
+"scripts":{
+ "predeploy": "npm run build",
+ "deploy": "gh-pages -d build",
+}
+```
+Now in your terminal run 
+```
+npm run deploy
+```
+
+#### 4. Setup source to gh-pages branch.  
+Once you successfully deployed open your GitHub code repository and click on settings tab if you scroll down you can see a GitHub Pages then choose a branch to gh-pages.
+![react app ghpages setup](https://reactgo.com/static/f1b680b3a2d43d59ea55047e89a39948/74755/react-ghpages-setup.png)
+
+
+That’s it now you can see your react app URL like in the above image.
+
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
